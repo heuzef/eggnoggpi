@@ -34,7 +34,7 @@ Since we installed raspbian lite on the pi, we'll need to install xorg and set i
 
 You can then configure nodm or just use the configuration file with this repo
 
-    cp nodm /etc/default/nodm
+    cp files/etc/default/nodm /etc/default/nodm
 
 ## Download eggnoggplus
 
@@ -44,8 +44,10 @@ To be continued
 
 To allow eggnogg to start on boot, we install it as a systemd service, you can write your own or just use the one with this repos
 
-    cp eggnoggpi.service /etc/systemd/system/eggnoggpi.service
+    cp files/etc/systemd/system/eggnoggpi.service /etc/systemd/system/eggnoggpi.service
     systemctl daemon-reload
     systemctl enable eggnoggpi
     systemctl start eggnoggpi
 
+If eggnoggpi doesn't start with the pi, add this little hack too
+    echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab

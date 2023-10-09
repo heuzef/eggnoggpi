@@ -1,0 +1,18 @@
+[Unit]
+Description=Eggnogg Plus on a Raspberry Pi
+Requires=nodm.service
+After=nodm.service
+
+[Service]
+Restart=always
+User=pi
+Group=pi
+EnvironmentFile=/etc/default/eggnogg
+
+WorkingDirectory=/home/pi/eggnoggplus-linux
+ExecStartPre=sleep 5
+ExecStart=/home/pi/eggnoggplus-linux/eggnoggplus
+
+[Install]
+WantedBy=graphical.target
+
