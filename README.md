@@ -50,4 +50,5 @@ To allow eggnogg to start on boot, we install it as a systemd service, you can w
     systemctl start eggnoggpi
 
 If eggnoggpi doesn't start with the pi, add this little hack too
+
     echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab
