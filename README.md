@@ -34,11 +34,15 @@ Since we installed raspbian lite on the pi, we'll need to install xorg and set i
 
 You can then configure nodm or just use the configuration file with this repo
 
-    cp files/etc/default/nodm /etc/default/nodm
+    cp files/etc/default/* /etc/default/
 
 ## Download eggnoggplus
 
 To be continued
+
+Then copy the setting file
+
+    cp -R files/home/pi/.madgarden /home/pi/
 
 ## Install the service
 
