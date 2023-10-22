@@ -57,6 +57,7 @@ sudo cp /home/pi/eggnoggpi/files/etc/default/* /etc/default/
 
 ```
 sudo cp -r /home/pi/eggnoggpi/files/home/eggnoggplus-linux/ /home/pi/
+sudo chmod +x /home/pi/eggnoggplus-linux/eggnoggplus/
 sudo chown pi:pi -R /home/pi/eggnoggplus-linux/
 cp -R /home/pi/eggnoggpi/files/home/.madgarden/ /home/pi/
 ```
