@@ -71,9 +71,5 @@ sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/eggnoggpi.service /etc/syste
 sudo systemctl daemon-reload
 sudo systemctl enable eggnoggpi
 sudo systemctl start eggnoggpi
-```
-
-If eggnoggpi doesn't start with the pi, add this little hack too
-```
 sudo echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab
 ```
