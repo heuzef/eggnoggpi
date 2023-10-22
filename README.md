@@ -33,10 +33,10 @@ apt install box64-arm64 -y
 
 ## Setup the screen
 
-Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm and xutils
+Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm.
 
 ```
-sudo apt install nodm
+sudo apt install nodm libsdl2-2.0-0
 ```
 
 ## Clone the repo of project
