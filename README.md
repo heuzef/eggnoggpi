@@ -62,6 +62,10 @@ sudo chown pi:pi -R /home/pi/eggnoggplus-linux/
 cp -R /home/pi/eggnoggpi/files/home/.madgarden/ /home/pi/
 ```
 
+## Configure controller
+
+...
+
 ## Install the service
 
 To allow eggnogg to start on boot, we install it as a systemd service, you can write your own or just use the one with this repos
