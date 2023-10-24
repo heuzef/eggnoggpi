@@ -33,10 +33,10 @@ apt install box64-arm64 -y
 
 ## Setup the screen
 
-Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm and xutils
+Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm.
 
 ```
-sudo apt install nodm
+sudo apt install nodm libsdl2-2.0-0
 ```
 
 ## Clone the repo of project
@@ -45,34 +45,35 @@ sudo apt install nodm
 git clone https://git.heuzef.com/Flutter/eggnoggpi.git
 ```
 
-## Clone the repo of project
-
+## Configure nodm
 
 You can then configure nodm or just use the configuration file with this repo
 
 ```
-cp /home/pi/eggnoggpi/files/etc/default/* /etc/default/
+sudo cp /home/pi/eggnoggpi/files/etc/default/* /etc/default/
 ```
 
-## Download eggnoggplus
+## Install eggnoggplus
 
-To be continued
+```
+sudo cp -r /home/pi/eggnoggpi/files/home/eggnoggplus-linux/ /home/pi/
+sudo chmod +x /home/pi/eggnoggplus-linux/eggnoggplus/
+sudo chown pi:pi -R /home/pi/eggnoggplus-linux/
+cp -R /home/pi/eggnoggpi/files/home/.madgarden/ /home/pi/
+```
 
-Then copy the setting file
-```
-cp -R files/home/pi/.madgarden /home/pi/
-```
+## Configure controller
+
+...
 
 ## Install the service
 
 To allow eggnogg to start on boot, we install it as a systemd service, you can write your own or just use the one with this repos
+
 ```
-    cp files/etc/systemd/system/eggnoggpi.service /etc/systemd/system/eggnoggpi.service
-    systemctl daemon-reload
-    systemctl enable eggnoggpi
-    systemctl start eggnoggpi
-```
-If eggnoggpi doesn't start with the pi, add this little hack too
-```
-    echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab
+sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/eggnoggpi.service /etc/systemd/system/eggnoggpi.service
+sudo systemctl daemon-reload
+sudo systemctl enable eggnoggpi
+sudo systemctl start eggnoggpi
+sudo echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab
 ```
