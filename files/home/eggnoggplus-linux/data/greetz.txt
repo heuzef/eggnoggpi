@@ -1,5 +1,5 @@
-EGGNOGGPI par Heuzef (heuzef.com) et FlutterBrony (antoine.admtz.fr)
-Regles : Tuer > Suivre la fleche > Sauter dans le lac !
-Reglages en haut a droite ou START en jeu.
+EGGNOGGPI par Heuzef (heuzef.com) et FlutterBrony (antoine.admtz.fr)     
+Regles : Tuer > Suivre la fleche > Sauter dans le lac !     
+Reglages : START en jeu.     
 Jeu original : EGGNOGG+ (BETA ver. $) by Madgarden (madgarden.net)
                                                                   
