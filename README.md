@@ -76,5 +76,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable eggnoggpi
 sudo systemctl start eggnoggpi
 sudo echo "@reboot    root    /sbin/service eggnoggpi start" >> /etc/crontab
-sudo echo "@reboot    root    mpv --loop /home/pi/music.opus" >> /etc/crontab
 ```
