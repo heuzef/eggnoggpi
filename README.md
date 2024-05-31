@@ -72,9 +72,11 @@ To allow eggnogg to start on boot, we install it as a systemd service, you can w
 
 ```sh
 sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/eggnoggpi.service /etc/systemd/system/eggnoggpi.service
+sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/mpv.service /etc/systemd/system/mpv.service
 sudo systemctl daemon-reload
 sudo systemctl enable eggnoggpi
+sudo systemctl enable mpv
+sudo systemctl start mpv
 sudo systemctl start eggnoggpi
 sudo echo "@reboot    root    /sbin/service eggnoggpi start" >> /etc/crontab
-sudo echo "@reboot    root    mpv --loop /home/pi/music.opus" >> /etc/crontab
 ```

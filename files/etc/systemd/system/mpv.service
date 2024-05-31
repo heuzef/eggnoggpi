@@ -1,0 +1,13 @@
+[Unit]
+Description=mpv audio service
+
+[Service]
+Restart=always
+User=pi
+Group=pi
+EnvironmentFile=/etc/default/eggnogg
+
+ExecStart=/usr/bin/mpv --loop=inf --no-audio-display /home/pi/music.opus 
+
+[Install]
+WantedBy=multi-user.target
