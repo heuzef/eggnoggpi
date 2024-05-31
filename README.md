@@ -36,7 +36,7 @@ apt install box64-arm64 -y
 Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm.
 
 ```
-sudo apt install -y nodm libsdl2-2.0-0 mpv
+sudo apt install -y nodm libsdl2-2.0-0 mpv antimicrox
 ```
 
 ## Clone the repo of project
@@ -73,10 +73,14 @@ To allow eggnogg to start on boot, we install it as a systemd service, you can w
 ```sh
 sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/eggnoggpi.service /etc/systemd/system/eggnoggpi.service
 sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/mpv.service /etc/systemd/system/mpv.service
+sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/antimicrox.service /etc/systemd/system/antimicrox.service
 sudo systemctl daemon-reload
+sudo systemctl enable antimicrox
+sudo systemctl start antimicrox
 sudo systemctl enable eggnoggpi
 sudo systemctl enable mpv
 sudo systemctl start mpv
 sudo systemctl start eggnoggpi
 sudo echo "@reboot    root    /sbin/service eggnoggpi start" >> /etc/crontab
+cp -R /home/pi/eggnoggpi/files/home/.config/antimicrox .config/
 ```

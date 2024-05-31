@@ -1,0 +1,16 @@
+[Unit]
+Description=antimicrox
+Requires=nodm.service
+After=nodm.service
+
+[Service]
+Restart=always
+User=pi
+Group=pi
+EnvironmentFile=/etc/default/eggnogg
+
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/antimicrox
+
+[Install]
+WantedBy=graphical.target
