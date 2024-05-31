@@ -1,1 +1,0 @@
-@reboot    root    mpv --loop /home/pi/music.opus /etc/crontab
