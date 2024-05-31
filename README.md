@@ -2,13 +2,13 @@
 
 Eggnogg on the Raspberry PI02W !
 
-## Description
+## Description
 
 For all of you who need to run eggnoggplus on a raspberry pi to get frenzied parties, eggnoggpi is the right project.
 
 In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, so you only need to connect 2 controller, and a screen, power on the pi, and play !
 
-## Setup raspbian lite 64 bit
+## Setup raspbian lite 64 bit
 
 First thing first, you'll need to install raspbian lite on your pi, you can do this just by downloading rpi-image from the official raspberry pi website https://www.raspberrypi.com/software
 
@@ -36,7 +36,7 @@ apt install box64-arm64 -y
 Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm.
 
 ```
-sudo apt install nodm libsdl2-2.0-0
+sudo apt install -y nodm libsdl2-2.0-0 mpv
 ```
 
 ## Clone the repo of project
@@ -70,10 +70,11 @@ cp -R /home/pi/eggnoggpi/files/home/.madgarden/ /home/pi/
 
 To allow eggnogg to start on boot, we install it as a systemd service, you can write your own or just use the one with this repos
 
-```
+```sh
 sudo cp /home/pi/eggnoggpi/files/etc/systemd/system/eggnoggpi.service /etc/systemd/system/eggnoggpi.service
 sudo systemctl daemon-reload
 sudo systemctl enable eggnoggpi
 sudo systemctl start eggnoggpi
-sudo echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab
+sudo echo "@reboot    root    /sbin/service eggnoggpi start" >> /etc/crontab
+sudo echo "@reboot    root    mpv --loop /home/pi/music.opus" >> /etc/crontab
 ```
