@@ -10,7 +10,7 @@ Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
 WorkingDirectory=/home/pi/eggnoggplus-linux
-ExecStartPre=sleep 5
+ExecStartPre=/usr/bin/mpv --loop-file=inf --background-color=black /home/pi/music.opus &
 ExecStart=/home/pi/eggnoggplus-linux/eggnoggplus
 
 [Install]
