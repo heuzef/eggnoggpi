@@ -77,3 +77,8 @@ sudo systemctl enable eggnoggpi
 sudo systemctl start eggnoggpi
 sudo echo "@reboot	root	/sbin/service eggnoggpi start" >> /etc/crontab
 ```
+
+
+### dirty section
+putting eggnogg service as root to quick fix a sound bug
+Sound is working, but eggnogg is not playing on the right interface
