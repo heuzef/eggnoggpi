@@ -18,6 +18,8 @@ In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, s
 * [2 PCS Wired USB NES Conroller Game Joypad](https://fr.aliexpress.com/item/1005001611443967.html)
 * For the case, you can use the 3D source files
 
+Estimated total cost arround 50$
+
 ## Setup Raspbian Lite 64 bit
 
 First thing first, you'll need to install raspbian lite on your pi, you can do this just by downloading rpi-image from the official raspberry pi website https://www.raspberrypi.com/software
