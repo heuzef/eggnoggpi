@@ -10,7 +10,7 @@ NODM_USER=pi
 NODM_FIRST_VT='7'
 
 # X session
-NODM_XSESSION=/etc/X11/Xsession
+NODM_XSESSION=/home/pi/.xsession
 
 # Options for nodm itself
 NODM_OPTIONS=
