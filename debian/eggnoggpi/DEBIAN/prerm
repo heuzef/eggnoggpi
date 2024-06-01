@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "disabling services"
+systemctl disable eggnoggpi mpv antimicrox
+systemctl stop eggnoggpi mpv antimicrox
