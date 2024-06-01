@@ -9,7 +9,7 @@ User=pi
 Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
-WorkingDirectory=/home/pi/eggnoggplus-linux
+WorkingDirectory=/usr/local/games/eggnoggplus-linux
 ExecStartPre=sleep 10
 ExecStart=/usr/local/games/eggnoggplus-linux/eggnoggplus
 
