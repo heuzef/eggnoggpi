@@ -11,14 +11,14 @@ In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, s
 ## Hardware needed
 
 * [Raspberry PI02W](https://www.kubii.com/en/nano-computers/3455-raspberry-pi-zero-2-w-5056561800004.html)
-* Micro-SD Card (16GB)
+* Micro-SD Card (4GB)
 * Mini-HDMI cable
 * 5V 2.5A power supply
 * [AuviPal Hub Micro USB OTG 3 Ports + Power](https://www.amazon.fr/gp/product/B083WML1XB)
 * [2 PCS Wired USB NES Conroller Game Joypad](https://fr.aliexpress.com/item/1005001611443967.html)
 * For the case, you can use the 3D source files
 
-## Setup raspbian lite 64 bit
+## Setup Raspbian Lite 64 bit
 
 First thing first, you'll need to install raspbian lite on your pi, you can do this just by downloading rpi-image from the official raspberry pi website https://www.raspberrypi.com/software
 
@@ -26,9 +26,11 @@ You'll then only need a minimum of 4Gb µSD card, and install raspbian lite **64
 
 https://www.raspberrypi.com/documentation/computers/getting-started.html
 
-Connect, setup Wi-Fi and run somes update
+Connect, setup Wi-Fi and run somes update.
 
-## setup swap to no
+
+
+## Disable Swap
 
 ```
 sudo dphys-swapfile swapoff && \
@@ -36,7 +38,9 @@ sudo dphys-swapfile uninstall && \
 sudo systemctl disable dphys-swapfile
 ```
 
-## Setup box64
+## 
+
+## Setup BOX64
 
 Sadly, Eggnoggplus is a x86_64 program only on linux, and we do not have access to the sources, so well need a little help from an emulator to get it working.
 
@@ -49,6 +53,8 @@ apt update
 apt install box64-arm64 -y
 ```
 
+## 
+
 ## Setup the screen
 
 Since we installed raspbian lite on the pi, we'll need to install xorg and set it to auto login on boot, to achieve that, we'll install nodm.
@@ -57,13 +63,16 @@ Since we installed raspbian lite on the pi, we'll need to install xorg and set i
 sudo apt install -y nodm libsdl2-2.0-0 mpv antimicrox
 ```
 
+## 
+
 ## Clone the repo of project
 
 ```
+cd
 git clone https://git.heuzef.com/Flutter/eggnoggpi.git
 ```
 
-## Configure nodm
+## Configure Nodm
 
 You can then configure nodm or just use the configuration file with this repo
 
@@ -71,7 +80,7 @@ You can then configure nodm or just use the configuration file with this repo
 sudo cp /home/pi/eggnoggpi/files/etc/default/* /etc/default/
 ```
 
-## Install eggnoggplus
+## Install Eggnoggplus
 
 ```
 sudo cp -r /home/pi/eggnoggpi/files/home/eggnoggplus-linux/ /home/pi/
@@ -80,11 +89,9 @@ sudo chown pi:pi -R /home/pi/eggnoggplus-linux/
 cp -R /home/pi/eggnoggpi/files/home/.madgarden/ /home/pi/
 ```
 
-## Configure controller
 
-...
 
-## Install the service
+## Install services
 
 To allow eggnogg to start on boot, we install it as a systemd service, you can write your own or just use the one with this repos
 
