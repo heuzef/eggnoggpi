@@ -1,0 +1,17 @@
+[Unit]
+Description=Eggnogg Plus on a Raspberry Pi
+Requires=antimicrox.service
+After=antimicrox.service
+
+[Service]
+Restart=always
+User=pi
+Group=pi
+EnvironmentFile=/etc/default/eggnogg
+
+WorkingDirectory=/home/pi/eggnoggplus-linux
+ExecStartPre=sleep 10
+ExecStart=/usr/local/games/eggnoggplus-linux/eggnoggplus
+
+[Install]
+WantedBy=multi-user.target

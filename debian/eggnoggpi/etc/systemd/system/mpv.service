@@ -7,7 +7,8 @@ User=pi
 Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
-ExecStart=/usr/bin/mpv --loop=inf --no-audio-display /home/pi/music.opus 
+ExecStartPre=/usr/bin/mpv --no-audio-display /home/pi/intro.ogg
+ExecStart=/usr/bin/mpv --loop=inf --no-audio-display --volume=80 /home/pi/music.ogg
 
 [Install]
 WantedBy=multi-user.target

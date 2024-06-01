@@ -1,0 +1,8 @@
+Package: eggnoggpi
+Version: 1.0
+Priority: standard
+Section: games
+Architecture: aarch64
+Depends: nodm, libsdl2-2.0-0, mpv, antimicrox, box64-arm64
+Maintainer: flutterbrony <flutterbrony@admtz.fr>
+Description: Eggnogg on a pi
