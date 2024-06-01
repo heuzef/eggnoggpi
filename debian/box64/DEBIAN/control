@@ -1,0 +1,7 @@
+Package: box64-add-repository
+Version: 1.0
+Priority: standard
+Section: utils
+Architecture: arm64
+Maintainer: flutterbrony <flutterbrony@admtz.fr>
+Description: box64 repository installer
