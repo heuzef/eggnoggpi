@@ -18,6 +18,14 @@ https://www.raspberrypi.com/documentation/computers/getting-started.html
 
 Connect, setup Wi-Fi and run somes update
 
+## setup swap to no
+
+```
+sudo dphys-swapfile swapoff && \
+sudo dphys-swapfile uninstall && \
+sudo systemctl disable dphys-swapfile
+```
+
 ## Setup box64
 
 Sadly, Eggnoggplus is a x86_64 program only on linux, and we do not have access to the sources, so well need a little help from an emulator to get it working.
