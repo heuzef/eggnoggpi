@@ -2,15 +2,11 @@
 
 Eggnogg on the Raspberry PI !
 
-
-
 ## Description
 
 For all of you who need to run eggnoggplus on a raspberry pi to get frenzied parties, eggnoggpi is the right project.
 
 In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, so you only need to connect 2 controller, and a screen, power on the pi, and play !
-
-
 
 ## Hardware needed
 
@@ -24,8 +20,6 @@ In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, s
 
 Estimated total cost arround 50$
 
-
-
 ## Setup Raspbian Lite 64 bit
 
 First thing first, you'll need to install raspbian lite on your pi, you can do this just by downloading rpi-image from the official raspberry pi website https://www.raspberrypi.com/software
@@ -36,14 +30,12 @@ https://www.raspberrypi.com/documentation/computers/getting-started.html
 
 Connect, setup Wi-Fi and run somes update.
 
-
-
 ## Install
 
-```
+```she
 sudo apt install -y git 
 git clone https://git.heuzef.com/Flutter/eggnoggpi.git
 cd eggnoggpi
 sudo apt install -y ./box64.deb 
-sudo apt install -y ./eggnogg.deb 
+sudo apt install -y ./eggnoggpi.deb 
 ```
