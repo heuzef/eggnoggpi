@@ -32,7 +32,7 @@ Connect, setup Wi-Fi and run somes update.
 
 ## Install
 
-```she
+```shell
 sudo apt install -y git 
 git clone https://git.heuzef.com/Flutter/eggnoggpi.git
 cd eggnoggpi
