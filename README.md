@@ -41,9 +41,9 @@ Connect, setup Wi-Fi and run somes update.
 ## Install
 
 ```
-sudo apt install git 
+sudo apt install -y git 
 git clone https://git.heuzef.com/Flutter/eggnoggpi.git
 cd eggnogg 
-sudo apt install ./box64.deb 
-sudo apt install ./eggnogg.deb 
+sudo apt install -y ./box64.deb 
+sudo apt install -y ./eggnogg.deb 
 ```
