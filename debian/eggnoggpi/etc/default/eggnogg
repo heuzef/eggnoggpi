@@ -1,0 +1,5 @@
+# X-Windows screen identifier
+DISPLAY=:0
+XDG_SESSION_CLASS=user
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+XDG_RUNTIME_DIR=/run/user/1001
