@@ -10,7 +10,7 @@ Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
 WorkingDirectory=/home/pi
-ExecStart=/usr/bin/antimicrox
+ExecStart=/usr/bin/antimicrox --profile /home/pi/.config/antimicrox/B.gamecontroller.amgp
 
 [Install]
 WantedBy=graphical.target

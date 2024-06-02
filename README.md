@@ -37,6 +37,6 @@ sudo apt install -y git
 git clone https://git.heuzef.com/Flutter/eggnoggpi.git
 cd eggnoggpi
 sudo apt install -y ./box64.deb 
-sudo apt install -y ./eggnoggpi.deb # When the prompt ask for enabling nodm, choose "yes"
+sudo apt install --no-install-recommends -y ./eggnoggpi.deb # When the prompt ask for enabling nodm, choose "yes"
 sudo reboot
 ```
