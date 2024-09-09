@@ -1,7 +1,7 @@
 [Unit]
 Description=Eggnogg Plus on a Raspberry Pi
-Requires=antimicrox.service
-After=antimicrox.service
+Requires=mpv.service
+After=mpv.service
 
 [Service]
 Restart=always
@@ -10,7 +10,6 @@ Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
 WorkingDirectory=/usr/local/games/eggnoggplus-linux
-ExecStartPre=sleep 10
 ExecStart=/usr/local/games/eggnoggplus-linux/eggnoggplus
 
 [Install]
