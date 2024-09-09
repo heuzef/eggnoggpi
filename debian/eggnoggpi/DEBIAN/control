@@ -3,6 +3,6 @@ Version: 1.0
 Priority: standard
 Section: games
 Architecture: arm64
-Depends: nodm, libsdl2-2.0-0, mpv, antimicrox, box64-rpi3arm64, pulseaudio, pulseaudio-utils, xterm
+Depends: nodm, libsdl2-2.0-0, mpv, box64-rpi3arm64, pulseaudio, pulseaudio-utils, xterm
 Maintainer: flutterbrony <flutterbrony@admtz.fr>
 Description: Eggnogg on a pi
