@@ -16,9 +16,15 @@ In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, s
 * 5V 2.5A power supply
 * [AuviPal Hub Micro USB OTG 3 Ports + Power](https://www.amazon.fr/gp/product/B083WML1XB)
 * [2 PCS Wired USB NES Conroller Game Joypad](https://fr.aliexpress.com/item/1005001611443967.html)
-* For the case, you can use the 3D source files
+* For the case, use the 3D source files with 3D printer
 
 Estimated total cost arround 50$
+
+## Hardware install
+
+* Hub Micro USB need to be connected on the Raspberry "**USB** port" (and not on the "Power port"). 
+
+* Plug the 2 USB NES Controller on the Hub Muicro USB.
 
 ## Setup Raspbian Lite 64 bit
 
