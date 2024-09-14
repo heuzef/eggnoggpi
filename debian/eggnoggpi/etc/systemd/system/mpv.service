@@ -1,5 +1,7 @@
 [Unit]
 Description=mpv audio service
+Require=sound.target
+After=sound.target
 
 [Service]
 Restart=always
@@ -7,6 +9,9 @@ User=pi
 Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
+Restart=always
+RestartSec=5s
+#ExecStartPre=/usr/local/bin/pulseaudio.sh && /usr/bin/mpv --no-audio-display /home/pi/intro.ogg
 ExecStartPre=/usr/bin/mpv --no-audio-display /home/pi/intro.ogg
 ExecStart=/usr/bin/mpv --loop=inf --no-audio-display --volume=80 /home/pi/music.ogg
 

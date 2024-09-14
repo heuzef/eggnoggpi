@@ -1,6 +1,6 @@
 [Unit]
 Description=Eggnogg Plus on a Raspberry Pi
-Requires=mpv.service
+Require=sound.target
 After=mpv.service
 
 [Service]
@@ -9,7 +9,10 @@ User=pi
 Group=pi
 EnvironmentFile=/etc/default/eggnogg
 
+Restart=always
+RestartSec=5s
 WorkingDirectory=/usr/local/games/eggnoggplus-linux
+ExecStartPre=/usr/local/bin/pulseaudio.sh
 ExecStart=/usr/local/games/eggnoggplus-linux/eggnoggplus
 
 [Install]
