@@ -1,14 +1,18 @@
 # EggnoggPI
 
-Eggnogg on the Raspberry PI !
+![photo](eggnoggpi.png)
 
-## Description
+---
 
-For all of you who need to run eggnoggplus on a raspberry pi to get frenzied parties, eggnoggpi is the right project.
+## 🎮 Eggnogg+ on the Raspberry PI !
 
-In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, so you only need to connect 2 controller, and a screen, power on the pi, and play !
+For all of you who need to run eggnoggplus on a raspberry pi to get frenzied parties **instantly**, EggnoggPI is for you.
 
-## Hardware needed
+In this readme, you will see how to setup a PI02W to autostart with EggnoggPI, so you only need to connect 2 controller, and a screen, power on the pi, and play !
+
+![preview](case/preview.gif)
+
+## 🦾 Hardware needed
 
 * [Raspberry PI02W](https://www.kubii.com/en/nano-computers/3455-raspberry-pi-zero-2-w-5056561800004.html)
 * Micro-SD Card (4GB)
@@ -18,15 +22,15 @@ In this readme, you will see how to setup a PI02W to autostart with eggnoggpi, s
 * [2 PCS Wired USB NES Conroller Game Joypad](https://fr.aliexpress.com/item/1005001611443967.html)
 * For the case, use the 3D source files with 3D printer
 
-Estimated total cost arround 50$
+*Estimated total cost arround 50$*
 
-## Hardware install
+## 👨‍🔧 Hardware install
 
 * Hub Micro USB need to be connected on the Raspberry "**USB** port" (and not on the "Power port"). 
 
 * Plug the 2 USB NES Controller on the Hub Muicro USB.
 
-## Setup Raspbian Lite 64 bit
+## 🍓 Setup Raspbian Lite 64 bit
 
 First thing first, you'll need to install raspbian lite on your pi, you can do this just by downloading rpi-image from the official raspberry pi website https://www.raspberrypi.com/software
 
@@ -36,7 +40,7 @@ https://www.raspberrypi.com/documentation/computers/getting-started.html
 
 Connect, setup Wi-Fi and run somes update.
 
-## Install
+## 📥 Install
 
 ```shell
 sudo apt install -y git 
@@ -46,3 +50,19 @@ sudo apt install -y ./box64.deb
 sudo apt install --no-install-recommends -y ./eggnoggpi.deb # When the prompt ask for enabling nodm, choose "yes"
 sudo reboot
 ```
+
+# 💗 Credits
+
+## Authors
+
+* 🇫🇷 Heuzef (heuzef.com) contact@heuzef.com
+
+* 🇫🇷 FlutterBrony (admtz.fr) antoinemz@gmail.com
+
+* EGGNOGG+ by Madgarden (madgarden.net)
+
+
+
+# 📜 Licence
+
+...
