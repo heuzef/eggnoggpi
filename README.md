@@ -44,7 +44,7 @@ Connect, setup Wi-Fi and run somes update.
 
 ```shell
 sudo apt install -y git 
-git clone https://git.heuzef.com/Flutter/eggnoggpi.git
+git clone https://github.com/heuzef/eggnoggpi.git
 cd eggnoggpi
 sudo apt install -y ./box64.deb 
 sudo apt install --no-install-recommends -y ./eggnoggpi.deb # When the prompt ask for enabling nodm, choose "yes"
@@ -61,8 +61,6 @@ sudo reboot
 
 * EGGNOGG+ by Madgarden (madgarden.net)
 
-
-
 # 📜 Licence
 
-...
+[!License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc/4.0/)
