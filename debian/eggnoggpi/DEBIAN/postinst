@@ -3,6 +3,6 @@
 echo "Install the service"
 
 systemctl daemon-reload
-systemctl enable eggnoggpi mpv nodm
-systemctl start mpv eggnoggpi nodm
+systemctl enable mpv nodm
+systemctl start mpv nodm
 echo "@reboot    root    sleep 15; /sbin/service eggnoggpi start" >> /etc/crontab
