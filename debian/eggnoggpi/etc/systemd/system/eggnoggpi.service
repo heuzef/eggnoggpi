@@ -1,7 +1,8 @@
 [Unit]
 Description=Eggnogg Plus on a Raspberry Pi
 After=mpv.service
-After=sound.target
+After=pulseaudio.service
+Wants=pulseaudio.service
 
 [Service]
 Restart=always
@@ -12,7 +13,10 @@ EnvironmentFile=/etc/default/eggnogg
 Restart=always
 RestartSec=5s
 WorkingDirectory=/usr/local/games/eggnoggplus-linux
+ExecStartPre=echo "batard" > /tmp/eggnoggpi
+#ExecStartPre=bash -c "while :; do if [ -d /run/user/1000/pulse ]; then break; fi; sleep 1; done"
 ExecStart=/usr/local/games/eggnoggplus-linux/eggnoggplus
 
 [Install]
-WantedBy=multi-user.target
+#WantedBy=multi-user.target
+WantedBy=graphical.target
