@@ -13,7 +13,6 @@ EnvironmentFile=/etc/default/eggnogg
 Restart=always
 RestartSec=5s
 WorkingDirectory=/usr/local/games/eggnoggplus-linux
-#ExecStartPre=bash -c "while :; do if [ -d /run/user/1000/pulse ]; then break; fi; sleep 1; done"
 ExecStart=/usr/local/games/eggnoggplus-linux/eggnoggplus
 
 [Install]
