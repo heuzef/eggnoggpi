@@ -12,6 +12,10 @@ In this readme, you will see how to setup a PI02W to autostart with EggnoggPI, s
 
 ![preview](case/preview.gif)
 
+## 🎬 Demo
+
+https://youtu.be/7fhLfv0Cwj8
+
 ## 🦾 Hardware needed
 
 * [Raspberry PI02W](https://www.kubii.com/en/nano-computers/3455-raspberry-pi-zero-2-w-5056561800004.html)
