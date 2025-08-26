@@ -42,7 +42,7 @@ You'll then only need a minimum of 4Gb µSD card, and install raspbian lite **64
 
 https://www.raspberrypi.com/documentation/computers/getting-started.html
 
-Connect, setup Wi-Fi and run somes update.
+Connect, setup Wi-Fi and run somes update. ⚠️ Don't change the defaut username "*pi*".
 
 ## 📥 Install
 
